@@ -51,10 +51,11 @@ export function Home() {
 							onClick={() => {
 								agregar(i);
 							}}>
-							<li className="list-group-item">{e}</li>
-							<button className="button">
-								<i className="fas fa-trash-alt"></i>
-							</button>
+							<div className="list-group-item">
+								{e}
+
+								<i className="fas fa-trash-alt float-right hide"></i>
+							</div>
 						</div>
 					);
 				})}
