@@ -6,3 +6,12 @@
 }
 h1 {text-align: center;
 }
+.button {
+    display: none;
+    width: 10px;
+    margin: 0;
+}
+
+li:hover + .button, .button:hover {
+    display: flex;
+}
