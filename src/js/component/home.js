@@ -66,13 +66,15 @@ export function Home() {
 							onClick={() => {
 								eliminar(i);
 							}}>
-							{e}
-							<i
-								type="button"
-								className={
-									"fas fa-trash-alt float-right" +
-									(mouse == i ? "" : " hide")
-								}></i>
+							<li className="list-group-item">
+								{e}
+								<i
+									type="button"
+									className={
+										"fas fa-trash-alt float-right" +
+										(mouse == i ? "" : " hide")
+									}></i>
+							</li>
 						</div>
 					);
 				})}
