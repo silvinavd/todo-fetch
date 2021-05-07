@@ -6,22 +6,15 @@
 }
 h1 {text-align: center;
 }
-/*.button {
-    display: none;
-    width: 10px;
-    margin: 0;
+
+
+i {
+display: none;
+width: 10px;
+margin: 0;
+float: right;
 }
 
-li:hover + .button, .button:hover {
-    display: flex;
+.hide{
+display: none;
 }
-
-*/
-.divlista:hover + .hide  {
-  display: flex;
-  background-color: red;
-}
-.hide {
-  display:none;
-}    
-

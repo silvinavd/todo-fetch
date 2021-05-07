@@ -63,17 +63,17 @@ export function Home() {
 							className="list-group list-group-flush"
 							onMouseOver={() => {
 								mouseencima(i);
+							}}
+							onClick={() => {
+								eliminar(i);
 							}}>
-							<div
-								className="list-group-item"
-								onClick={() => {
-									eliminar(i);
-								}}>
-								{e}
-								<i
-									type="button"
-									className="fas fa-trash-alt float-right"></i>
-							</div>
+							{e}
+							<i
+								type="button"
+								className={
+									"fas fa-trash-alt float-right" +
+									(mouse == i ? "" : " hide")
+								}></i>
 						</div>
 					);
 				})}
