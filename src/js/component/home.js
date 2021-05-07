@@ -55,12 +55,11 @@ export function Home() {
 				</button>
 			</form>
 
-			<div>
+			<div className="list-group list-group-flush">
 				{lista.map((e, i) => {
 					return (
 						<div
 							key={i}
-							className="list-group list-group-flush"
 							onMouseOver={() => {
 								mouseencima(i);
 							}}
