@@ -7,6 +7,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 export function Home() {
 	const [tarea, setTarea] = useState("");
 	const [lista, setLista] = useState([]);
+	const [mouse, setMouse] = useState();
 
 	const agregar = e => {
 		e.preventDefault();
@@ -14,6 +15,18 @@ export function Home() {
 		setTarea("");
 	};
 
+	const eliminar = i => {
+		let nuevaLista = lista.filter((elem, index) => {
+			if (index != i) {
+				return elem;
+			}
+		});
+		setLista(nuevaLista);
+	};
+
+	const mouseencima = i => {
+		setMouse(i);
+	};
 	//funcion eliminar
 	//usar filter
 	//setLista nueva
@@ -48,13 +61,18 @@ export function Home() {
 						<div
 							key={i}
 							className="list-group list-group-flush"
-							onClick={() => {
-								agregar(i);
+							onMouseOver={() => {
+								mouseencima(i);
 							}}>
-							<div className="list-group-item">
+							<div
+								className="list-group-item"
+								onClick={() => {
+									eliminar(i);
+								}}>
 								{e}
-
-								<i className="fas fa-trash-alt float-right hide"></i>
+								<i
+									type="button"
+									className="fas fa-trash-alt float-right"></i>
 							</div>
 						</div>
 					);

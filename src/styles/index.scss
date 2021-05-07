@@ -16,12 +16,12 @@ li:hover + .button, .button:hover {
     display: flex;
 }
 
-.hide {
-  display:none;
-}*/
+*/
 .divlista:hover + .hide  {
   display: flex;
   background-color: red;
 }
-    
+.hide {
+  display:none;
+}    
 
