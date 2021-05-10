@@ -11,8 +11,12 @@ export function Home() {
 
 	const agregar = e => {
 		e.preventDefault();
-		setLista([...lista, tarea]);
-		setTarea("");
+		let newLista = {
+			label: e.target.value,
+			done: false
+		};
+		let newListaToDo = [...lista, newLista];
+		setLista(newListaToDo);
 	};
 
 	const eliminar = i => {
